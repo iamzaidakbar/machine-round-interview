@@ -1,17 +1,45 @@
 import { createBrowserRouter } from "react-router-dom";
-import Login from '../Components/Login/login';
-import Dashboard from "../Components/Dashboard/Dashboard";
+import { Suspense, lazy } from "react";
+import App from "../App";
+
+const CShapedUI = lazy(() => import("../Examples/CShapedUI/CShapedUI"));
+const StarRating = lazy(() => import("../Examples/StarRating/StarRating"));
+const TrafficLight = lazy(() => import("../Examples/TrafficLight/TrafficLight"));
 
 
 
 const Router = createBrowserRouter([
     {
-        path: "/login",
-        element: <Login />,
+        path: '/',
+        element: <App />,
+        children: [
+            {
+                path: "/c_shaped_ui",
+                element: (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <CShapedUI />
+                    </Suspense>
+                ),
+            },
+            {
+                path: "/star_rating",
+                element: (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <StarRating />
+                    </Suspense>
+                ),
+            },
+            {
+                path: "/traffic_light_system",
+                element: (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <TrafficLight />
+                        {/* <Practice /> */}
+                    </Suspense>
+                ),
+            }
+        ]
     },
-    {
-        path: "/dashboard",
-        element: <Dashboard />
-    }
+
 ]);
 export default Router

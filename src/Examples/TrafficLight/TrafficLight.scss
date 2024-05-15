@@ -1,0 +1,40 @@
+.traffic_lights {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .wrapper {
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #000;
+
+    .light {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 12px 0;
+      color: #fff;
+      font-weight: 600;
+      background-color: silver;
+
+      &.red {
+        background-color: red;
+      }
+
+      &.yellow {
+        background-color: yellow;
+        color: #000;
+      }
+
+      &.green {
+        background-color: green;
+      }
+    }
+  }
+}

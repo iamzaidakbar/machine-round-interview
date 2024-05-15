@@ -1,0 +1,34 @@
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: rgb(3, 55, 68);
+
+    label {
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        padding: 24px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 15px;
+            }
+        }
+    }
+}
