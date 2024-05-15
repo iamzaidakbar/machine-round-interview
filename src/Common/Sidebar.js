@@ -7,6 +7,7 @@ const Sidebar = () => {
         { id: 1, title: 'C Shaped UI', to: 'c_shaped_ui' },
         { id: 2, title: 'Star Rating', to: 'star_rating' },
         { id: 3, title: 'Traffic Light System', to: 'traffic_light_system' },
+        { id: 4, title: 'Nested Comments', to: 'nested_comments' },
     ];
 
     return (

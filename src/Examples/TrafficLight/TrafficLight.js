@@ -7,19 +7,22 @@ const Practice = () => {
             id: 1,
             backgroundColor: 'red',
             duration: 4000,
-            next: 'green'
+            next: 'green',
+            rule: 'stop',
         },
         {
             id: 2,
             backgroundColor: 'yellow',
             duration: 500,
-            next: 'red'
+            next: 'red',
+            rule: 'Be Ready',
         },
         {
             id: 3,
             backgroundColor: 'green',
             duration: 3000,
-            next: 'yellow'
+            next: 'yellow',
+            rule: 'Go',
         },
     ]
 
@@ -39,7 +42,7 @@ const Practice = () => {
         <div className='traffic_lights'>
             <div className='wrapper'>
                 {trafficLights.map(light => <span className={`light ${light.backgroundColor === currentColor ? currentColor : ''}`} key={light.id}>
-                    {light.id}
+                    {light.backgroundColor === currentColor ? light.rule : ''}
                 </span>)}
             </div>
         </div>

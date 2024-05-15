@@ -5,6 +5,7 @@ import App from "../App";
 const CShapedUI = lazy(() => import("../Examples/CShapedUI/CShapedUI"));
 const StarRating = lazy(() => import("../Examples/StarRating/StarRating"));
 const TrafficLight = lazy(() => import("../Examples/TrafficLight/TrafficLight"));
+const NestedComments = lazy(() => import("../Examples/NestedComments/NestedComments"));
 
 
 
@@ -34,10 +35,17 @@ const Router = createBrowserRouter([
                 element: (
                     <Suspense fallback={<div>Loading...</div>}>
                         <TrafficLight />
-                        {/* <Practice /> */}
                     </Suspense>
                 ),
-            }
+            },
+            {
+                path: "/nested_comments",
+                element: (
+                    <Suspense fallback={<div>Loading...</div>}>
+                     <NestedComments />
+                    </Suspense>
+                ),
+            },
         ]
     },
 
