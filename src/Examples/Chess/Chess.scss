@@ -1,0 +1,95 @@
+.ChessBoard {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    gap: 100px;
+    background-color: #302E2B;
+
+    .chess_board_layout {
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        .chess_row {
+            display: flex;
+
+            .chess_cell {
+                background-color: #EBECD0;
+                border: 1px solid rgb(255, 255, 255);
+                width: 70px;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #000;
+                font-weight: 500;
+                
+                cursor: pointer;
+            
+                &.selected {
+                    &::before {
+                        content: '';
+                        border: 1px solid rgb(194, 189, 189);
+                        width: 100%;
+                        height: 100%;
+                    }
+                    opacity: 1 !important;
+                    filter: contrast(1.5);
+                }
+            
+                &.dark {
+                    background-color: #779556;
+                    color: #fff;
+                }
+            }
+            
+
+        }
+    }
+
+    .chess_pieces {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .chess_piece {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            object-fit: cover;
+            opacity: 0.4;
+
+            &.rook,
+            &.pawn,
+            &.king,
+            &.bishop,
+            &.knight,
+            &:hover {
+                opacity: 1;
+                filter: contrast(2);
+            }
+
+        }
+    }
+
+    .selected_piece,
+    .selected_block {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0;
+    }
+    .reset_chess_board {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        padding: 4px 8px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

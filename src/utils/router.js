@@ -7,6 +7,7 @@ const StarRating = lazy(() => import("../Examples/StarRating/StarRating"));
 const TrafficLight = lazy(() => import("../Examples/TrafficLight/TrafficLight"));
 const NestedComments = lazy(() => import("../Examples/NestedComments/NestedComments"));
 const MarkAndShift = lazy(() => import("../Examples/MarkAndShift/MarkAndShift"));
+const Chess = lazy(() => import("../Examples/Chess/Chess"));
 
 
 
@@ -52,6 +53,14 @@ const Router = createBrowserRouter([
                 element: (
                     <Suspense fallback={<div>Loading...</div>}>
                         <MarkAndShift />
+                    </Suspense>
+                ),
+            },
+            {
+                path: "/chess_move",
+                element: (
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Chess />
                     </Suspense>
                 ),
             },

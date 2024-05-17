@@ -8,62 +8,22 @@ const MarkAndShift = () => {
         {
             id: 1,
             name: 'Mark',
-            age: 30,
-            gender: 'Male',
-            address: 'New York',
-            email: 'mark@gmail.com',
-            phone: '1234567890',
-            dob: '1990-01-01',
-            salary: 10000,
-            designation: 'Developer',
         },
         {
             id: 2,
             name: 'Joe',
-            age: 20,
-            gender: 'Male',
-            address: 'London',
-            email: 'joe@gmail.com',
-            phone: '1234567890',
-            dob: '1990-01-01',
-            salary: 10000,
-            designation: 'Developer',
         },
         {
             id: 3,
             name: 'John',
-            age: 20,
-            gender: 'Male',
-            address: 'London',
-            email: 'joe@gmail.com',
-            phone: '1234567890',
-            dob: '1990-01-01',
-            salary: 10000,
-            designation: 'Developer',
         },
         {
             id: 4,
             name: 'Emiway',
-            age: 20,
-            gender: 'Male',
-            address: 'London',
-            email: 'joe@gmail.com',
-            phone: '1234567890',
-            dob: '1990-01-01',
-            salary: 10000,
-            designation: 'Developer',
         },
         {
             id: 5,
             name: 'Zaid',
-            age: 20,
-            gender: 'Male',
-            address: 'London',
-            email: 'joe@gmail.com',
-            phone: '1234567890',
-            dob: '1990-01-01',
-            salary: 10000,
-            designation: 'Developer',
         },
 
     ]
@@ -130,7 +90,7 @@ const MarkAndShift = () => {
                     </span>)}
                 </section>
                 <section className='section_2'>
-                    <IoIosArrowForward className={(data?.length === 0 || markedData?.size === 0)? 'disabled' : ''} onClick={shiftData} size={'50px'} color='white' />
+                    <IoIosArrowForward className={(data?.length === 0 || markedData?.size === 0) ? 'disabled' : ''} onClick={shiftData} size={'50px'} color='white' />
                     <IoIosArrowBack className={(shiftedData.length === 0 || markedData.size === 0) ? 'disabled' : ''} onClick={unShiftData} size={'50px'} color='white' />
                 </section>
                 <section className='section_3'>
